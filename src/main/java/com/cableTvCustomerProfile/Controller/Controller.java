@@ -40,7 +40,7 @@ public class Controller {
             return new ResponseEntity<UserDetails>(userDetails,HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-    @PostMapping("/insetuserdetails")
+    @PostMapping("/insertuserdetails")
     public ResponseEntity<String> insertUserinfo( @RequestBody UserDetails userDetails)
     {
         try {

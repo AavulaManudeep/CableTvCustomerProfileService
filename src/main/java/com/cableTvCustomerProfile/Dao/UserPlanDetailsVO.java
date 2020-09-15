@@ -23,8 +23,8 @@ public class UserPlanDetailsVO implements Serializable {
     private String planName;
     @Column(name = "price")
     private Float price;
-    @OneToOne(fetch = FetchType.EAGER,mappedBy = "userPlanDetailsVO")
-    private UserDetails userdetails;
+//    @OneToOne(fetch = FetchType.EAGER)
+//    private UserDetails userdetails;
 
 //    @Transient
 //    private Map<String,Object> Otherproperties = new HashMap<>();
