@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -48,6 +49,13 @@ public class UserDetailServiceImpl implements UserDetailsService {
             logger.error("Error occurred while inserting userdetails into the Database ",ex.getStackTrace());
             throw new Exception("Exception occured");
         }
+    }
+
+    @Override
+    public List<UserDetails> getAllCustomersInfo() {
+        List<UserDetails> allUserDetails = userDetailsRepo.findAll();
+        logger.error("allUserDetails :",allUserDetails);
+        return allUserDetails;
     }
 
     @Override

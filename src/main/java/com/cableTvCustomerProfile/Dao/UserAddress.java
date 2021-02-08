@@ -31,6 +31,8 @@ public class UserAddress implements Serializable {
     private String mandal;
     @Column
     private String district;
+    @Column
+    private String state;
 //    @OneToOne(fetch = FetchType.EAGER,mappedBy = "userAddress")
 //    private UserDetails userDetails;
 
